@@ -1,0 +1,715 @@
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 250px 250px;
+  grid-template-rows: 300px;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home-grid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.home-grid div article {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.home-grid div article button {
+  font-size: 0.9em;
+  font-weight: 400;
+  display: block;
+  color: #fff;
+  outline: none;
+  border: none;
+  background-color: var(--first-color);
+  transition: ease-in 0.3s;
+  margin: 0;
+}
+
+.home-grid div article button:hover {
+  color: var(--first-color);
+  background-color: #fff;
+  outline: 1px solid var(--first-color);
+}
+
+/* form login */
+.l-form {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form {
+  width: 360px;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(32, 99, 105, 0.2);
+  position: relative;
+}
+
+.gender-icon {
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.form__title {
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  border-top: 2px solid var(--border-color);
+  width: 10rem;
+  height: 4rem;
+}
+
+.form-div {
+  position: relative;
+  height: 40px;
+  margin-bottom: 1.8rem;
+}
+
+.form-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: transparent;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.form-input ~ label {
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+  padding: 0 0.25rem;
+
+  color: var(--input-color);
+  font-size: var(--normal-font-size);
+  transition: 0.3s;
+}
+
+.form-button {
+  display: block;
+  margin-left: auto;
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  background-color: var(--first-color);
+  color: #fff;
+  font-size: var(--normal-font-size);
+  cursor: pointer;
+  border-radius: 0.5erm;
+}
+
+.form-button:focus {
+  outline: none;
+}
+
+.form-input:focus ~ label {
+  top: -0.5rem;
+  left: 0.8rem;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  background-color: #fff;
+}
+
+.form-input:not(:placeholder-shown).form-input:not(:focus) ~ label {
+  top: -0.5rem;
+  left: 0.8rem;
+  color: var(--first-color);
+  font-size: var(--small-font-size);
+  font-weight: 500;
+  background-color: #fff;
+}
+.form-input:is(:focus) {
+  border: 1px solid var(--first-color);
+}
+
+.form-div .coach-form-radio-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.form-div .coach-form-radio-div .radio-div input {
+  margin: 0 0.3rem;
+}
+
+.form-div .coach-form-radio-div .radio-div label {
+  color: #555;
+  margin-right: 1rem;
+}
+
+.input-error {
+  font-size: var(--small-font-size);
+  position: absolute;
+  left: 0.5rem;
+  bottom: -1.3rem;
+  color: red;
+}
+
+.form-error-response {
+  position: absolute;
+  top: 3rem;
+  color: red;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  place-items: center;
+  justify-content: flex-end;
+}
+
+.navbar-home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 3rem;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-list-home {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  align-items: center;
+  font-size: var(--normal-font-size);
+  justify-content: space-between;
+}
+
+.nav-list-home li a {
+  color: var(--first-color);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 3rem;
+  height: 100%;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+}
+
+.navbar > a:first-child {
+  font-weight: 800;
+  font-weight: bold;
+  color: var(--first-color);
+}
+.nav-list {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: var(--normal-font-size);
+}
+
+.nav-list > li {
+  margin-left: 5rem;
+  padding-left: 0.5rem;
+}
+
+.navbar,
+.nav-list > li > a {
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+a.isactive {
+  color: var(--first-color);
+}
+
+.navbar > a:hover,
+.nav-list > li > a:hover {
+  color: var(--first-color);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 0 0;
+}
+
+.coach-signup-section .coach-signup-form form {
+  height: 100%;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  padding: 2.5rem;
+}
+
+main .coach-signup-section form h1,
+button {
+  grid-column: 1 / span 2;
+  margin: 1.5rem 0;
+}
+
+main .coach-signup-section form button {
+  background-color: var(--first-color);
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 10rem;
+  transition: all 0.5s;
+}
+
+main .coach-signup-section form button:hover {
+  background-color: #fff;
+  color: var(--first-color);
+  outline: 1px solid var(--first-color);
+}
+
+.coach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem;
+  column-gap: 1.8rem;
+  height: 400px;
+  overflow-y: auto;
+}
+
+.coach-card {
+  padding: 1rem;
+  width: 270px;
+  height: 190px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.coach-card .imgBx {
+  position: absolute;
+  top: -40px;
+  left: 180px;
+  border-radius: 50%;
+}
+
+.coach-card .coach-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  height: 100%;
+  margin-top: 1rem;
+}
+
+.coach-card .coach-detail h2 {
+  font-weight: 800;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.2rem;
+}
+
+.coach-card .coach-detail h3 {
+  font-weight: 500;
+  font-size: 0.7em;
+  color: #797575;
+}
+.coach-card .coach-detail p {
+  font-weight: 500;
+  font-size: 0.7em;
+  color: #555;
+  line-height: 1.5em;
+}
+
+.coach-card .coach-detail button {
+  margin: 1rem;
+  line-height: 1.5em;
+  font-size: 0.8em;
+  padding: 0.5rem 0.5rem;
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+.coach-card .coach-detail button:is(:focus) {
+  border: 1px solid var(--first-color);
+}
+
+.coach-info,
+.user-info,
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  text-align: start;
+}
+.coach-info > img,
+.user-info > img {
+  width: 7rem;
+}
+
+.coach-detail > h2,
+.user-detail > h3 {
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.coach-detail > button,
+.user-detail > button {
+  padding: 0.25rem;
+  margin: 0 2rem;
+  outline: none;
+}
+
+.coach-detail > *,
+.user-detail > * {
+  padding: 0;
+  margin: 0;
+  color: "red";
+}
+
+footer {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.appointment-grid {
+  max-height: 500px;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.appointment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  font-size: 0.75rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.appointment-card > * {
+  margin: 0;
+  padding: 0;
+}
+
+.appointment-card:hover {
+  outline: 0.1rem solid var(--first-color);
+}
+
+.appointment-card button {
+  font-size: 1em;
+  font-weight: 500;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  color: #fff;
+  background-color: var(--first-color);
+}
+
+.modal-show {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.model-window {
+  background-color: white;
+  width: 50%;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.model-window p {
+  line-height: 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  color: #555;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.model-window div {
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.model-window div button {
+  border-radius: 0.5rem;
+  line-height: 1.2em;
+  font-size: 1em;
+  width: 6rem;
+  color: #fff;
+  background-color: var(--first-color);
+}
+
+.appointment-form {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  height: 300px;
+}
+
+.appointment-form article {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.appointment-form article div {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1rem 1.5rem 0;
+  position: relative;
+}
+
+.appointment-form article .error {
+  position: absolute;
+  bottom: -45px;
+}
+
+.appointment-form article button {
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 0.8em;
+  color: #fff;
+  background-color: var(--first-color);
+}
+
+.success-window {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+}
+
+.success-window P {
+  font-size: 1em;
+  line-height: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.success-window span {
+  font-size: 1em;
+
+  font-weight: 600;
+  color: #000;
+}
+
+.success-window button {
+  background-color: var(--first-color);
+  font-size: 0.8em;
+  padding: 0.7rem;
+  text-align: center;
+  color: #fff;
+}
+
+:is(.coach-profile-section, .user-profile-section) {
+  width: 350px;
+}
+
+:is(.coach-profile-section, .user-profile-section) article {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+:is(.coach-profile-section, .user-profile-section) article img {
+  position: absolute;
+  top: -15%;
+  left: 35%;
+}
+
+:is(.coach-profile-section, .user-profile-section)
+  article
+  :is(.coach-content, .user-content) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+:is(.coach-profile-section, .user-profile-section)
+  article
+  :is(.coach-content, .user-content)
+  h3 {
+  margin-top: 3.5rem;
+  margin-bottom: 0;
+  text-transform: capitalize;
+  line-height: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+}
+
+:is(.coach-profile-section, .user-profile-section) article .coach-content h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #555;
+  text-transform: lowercase;
+}
+
+:is(.coach-profile-section, .user-profile-section)
+  article
+  :is(.coach-content, .user-content)
+  p {
+  margin: 0.5rem;
+  line-height: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+:is(.coach-profile-section, .user-profile-section)
+  article
+  :is(.coach-content, .user-content)
+  button {
+  text-transform: capitalize;
+  font-size: 1rem;
+  padding: 0.6rem;
+}
+
+.coach-appointment-section {
+  height: 60vh;
+  width: 70%;
+  overflow-y: auto;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.coach-appointment-section article {
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+}
+
+.coach-appointment-section article h2 {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.coach-appointment-section article h3 {
+  line-height: 1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.coach-appointment-section article p {
+  line-height: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.user-signup-section .user-signup-article form {
+  width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(7, 1fr);
+  column-gap: 1rem;
+  padding: 1rem;
+}
+
+main .user-signup-section form h1,
+button {
+  grid-column: 1 / span 2;
+  margin: 1rem;
+}
+
+main .user-signup-section form button {
+  background-color: var(--first-color);
+  color: #fff;
+  width: 25rem;
+  height: 2.5rem;
+  margin: 0 10rem 1rem;
+  transition: all 0.5s;
+}
+
+main .user-signup-section form button:hover {
+  background-color: #fff;
+  color: var(--first-color);
+  outline: 1px solid var(--first-color);
+}
+
+.form-div .user-form-radio-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.form-div .user-form-radio-div .radio-div input {
+  margin: 0 0.4rem;
+}
+
+.form-div .user-form-radio-div .radio-div label {
+  color: #555;
+  margin-right: 1rem;
+}
